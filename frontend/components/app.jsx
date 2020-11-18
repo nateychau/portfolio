@@ -11,7 +11,7 @@ const Main = () => (
   <>
     <Splash /> 
     <ProjectIndex />
-    <Footer />
+    <About />
   </>
 )
 
@@ -21,8 +21,8 @@ export const App = () => {
     <Header />
     <div className="main">
       <Route exact path="/" component={Main} />
-      <Route exact path="/about" component={About} />
       <Route exact path="/resume" component={Resume} />
+      <Footer /> 
     </div>
     </>
   );

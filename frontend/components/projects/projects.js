@@ -33,6 +33,9 @@ export const ProjectList = {
         'Designed user profile page, featuring visualizer thumbnails, with React and Javascript. Passed additional props to template mentioned above, which caused visualizers to play on-hover.'],
     },
     role: '',
-    picture: ''
+    picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/schopsplash_edit.PNG'
+  }, 
+  dropzone: {
+    
   }
 }

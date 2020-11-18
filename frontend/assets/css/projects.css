@@ -14,7 +14,13 @@
 }
 
 .proj-item-third{
-  width: 33%;
+  width: 33.33%;
+  align-items: center;
+  display: flex;
+}
+
+.proj-item-two-third{
+  width: 66.66%;
   display: flex;
   align-items: center;
 }
@@ -24,12 +30,17 @@
 }
 
 .center{
+  display: flex;
   justify-content: center;
   font-size: 14px;
+  width: 66.66%;
+  padding-left: 30px;
 }
 
 .right{
   justify-content: flex-end;
+  display: flex;
+  width: 33.33%;
 }
 
 
@@ -40,6 +51,7 @@
 .proj-item-top{
   padding: 30px 0;
   cursor: pointer;
+  min-height: 80px;
 }
 
 .proj-item-top:hover{
@@ -53,6 +65,7 @@
 
 .proj-item-bottom{
   padding: 20px 0;
+  transition: all 2s ease;
 }
 
 .proj-item-left, .proj-item-right{

@@ -1,0 +1,37 @@
+.footer{
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.footer-third{
+  width: 33%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-third address{
+  width: 100%;
+  display: flex;
+}
+
+.footer-third address a{
+  color: #fecf3b;
+}
+
+.socials-list{
+  font-size: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  justify-self: flex-end;
+}
+
+.social-item{
+  margin-left: 20px;
+}
+
+.social-item:hover{
+  color: #fecf3b;
+}

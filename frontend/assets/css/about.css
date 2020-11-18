@@ -1,0 +1,49 @@
+.about{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.about > div{
+  display: flex;
+}
+
+.about-left, .about-right{
+  width: 50%;
+  display: flex;
+}
+
+.about-left{
+  flex-direction: column;
+}
+
+.about-left > * {
+  padding-bottom: 20px;
+}
+
+.about-right{
+  justify-content: flex-end
+}
+
+.about-right .img-container{
+  width: 40%;
+}
+
+.about > h2{
+  padding: 20px 0;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+}
+
+.about-left h2{
+  font-size: 24px;
+}
+
+.about-left div{
+  line-height: 30px;
+}
+
+.about-left a{
+  width: 50px;
+  color: #fecf3b;
+}

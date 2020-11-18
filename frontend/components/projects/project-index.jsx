@@ -13,12 +13,23 @@ export class ProjectIndex extends React.Component{
 
   toggleOpen(id){
     return () => {
-      if (!this.state.open){
-        this.setState({open: true, openId: id});
+      if(this.state[id]){
+        this.setState({[id]: false});
       } else {
-        this.setState({open: false, openId: null});
+        this.setState({[id]: true});
       }
     }
+
+    // return () => {
+    //   if (!this.state.open){
+    //     this.setState({open: true, openId: id});
+    //   } else if(this.state.openId === id) {
+    //     this.setState({open: false, openId: null});
+    //   }
+    //   else{
+    //     this.setState({openId: id})
+    //   }
+    // }
   }
 
   render(){
@@ -32,7 +43,7 @@ export class ProjectIndex extends React.Component{
         if(key === 'bullets'){
           const bullets = project.info[key];
           return bullets.map((bullet, i) => {
-            return <li key={i} className="proj-list-item bullet"><li>{bullet}</li></li>
+            return <div key={i} className="proj-list-item bullet"><li>{bullet}</li></div>
           })
         }
         return <li key={i} id={key} className="proj-list-item">{project.info[key]}</li>
@@ -52,15 +63,17 @@ export class ProjectIndex extends React.Component{
             <div className="proj-item-third left">
               <div className="proj-title">{project.name}</div>
             </div>
-            <div className="proj-item-third center">
-              <div>{project.about}</div>
-            </div>
-            <div className="proj-item-third right">
-              <a onClick={(e) => e.stopPropagation()} className="proj-btn" href={project.repo} target="_blank">Github</a>
-              <a onClick={(e) => e.stopPropagation()} className="proj-btn" href={project.live} target="_blank">Live</a>
+            <div className="proj-item-two-third">
+              <div className="center">
+                <div>{project.about}</div>
+              </div>
+              <div className="right">
+                <a onClick={(e) => e.stopPropagation()} className="proj-btn" href={project.repo} target="_blank">Github</a>
+                <a onClick={(e) => e.stopPropagation()} className="proj-btn" href={project.live} target="_blank">Live</a>
+              </div>
             </div>
           </div>
-          {this.state.openId === project.id ? 
+          {this.state[project.id] ? //openId === project.id ? 
           <div className="proj-item-bottom">
             <div className="proj-item-left">
               <div className="img-container">
