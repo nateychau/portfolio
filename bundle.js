@@ -202,6 +202,7 @@ var Footer = function Footer() {
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "footer",
     className: "footer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-third"
@@ -273,7 +274,7 @@ var Header = function Header(props) {
     }
   }, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     onClick: function onClick() {
-      return scrollTo('contact');
+      return scrollTo('footer');
     }
   }, "Contact"))));
 };

@@ -17,7 +17,7 @@ export const Footer = () => {
   }
 
   return (
-    <div className="footer">
+    <div id="footer" className="footer">
       <div className="footer-third">
         <address>
           Contact: &nbsp; <a href="mailto:nateychau@gmail.com">nateychau@gmail.com</a> 

@@ -19,7 +19,7 @@ export const Header = (props) => {
         <ul className="nav-links">
           <li onClick={() => scrollTo('projects')}>Projects</li>
           <li onClick={() => scrollTo('about')}>About</li>
-          <li onClick={() => scrollTo('contact')}>Contact</li>
+          <li onClick={() => scrollTo('footer')}>Contact</li>
           {/* <li><NavLink activeClassName="active-link" to="/">About</NavLink></li>
           <li><NavLink activeClassName="active-link" to="/">Projects</NavLink></li>
           <li><NavLink activeClassName="active-link" to="/">Contact</NavLink></li> */}
