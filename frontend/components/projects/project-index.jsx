@@ -22,6 +22,13 @@ export class ProjectIndex extends React.Component {
     };
   }
 
+  componentWillUnmount(){
+    this.setState({
+      open: false,
+      openId: null,
+    })
+  }
+
   render() {
     const projList = [];
     for (let key in ProjectList) {

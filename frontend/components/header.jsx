@@ -13,11 +13,15 @@ export class Header extends React.Component{
   }
 
   componentDidMount(){
-    window.addEventListener('scroll', this.handleScroll, { passive: true })
+    window.addEventListener('scroll', this.handleScroll, { passive: true });
   }
 
   componentWillUnmount(){
-    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('scroll', this.handleScroll);
+    this.setState({
+      windowTop: 0,
+      current: null
+    });
   }
 
   handleScroll(){
@@ -62,7 +66,7 @@ export class Header extends React.Component{
             >About</li>
             <li
               // className={this.state.current === "footer" ? "active" : ''} 
-              onClick={this.scrollTo('footer')}
+              onClick={this.scrollTo('contact')}
             >Contact</li>
             {/* <li><NavLink activeClassName="active-link" to="/">About</NavLink></li>
             <li><NavLink activeClassName="active-link" to="/">Projects</NavLink></li>

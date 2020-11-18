@@ -1,0 +1,30 @@
+
+#contact > h2{
+  padding: 20px 0;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+}
+
+#contact {
+  min-height: calc(100vh - 145px);
+}
+
+#contact .socials-list{
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+
+#contact .socials-list li{
+  margin-left: 30px;
+  font-size: 36px;
+  transition: all 0.5s ease;
+}
+
+#contact .socials-list li:first-child{
+  margin-left: 0;
+}
+
+#contact > div{
+  padding-bottom: 20px;
+}

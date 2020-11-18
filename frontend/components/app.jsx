@@ -6,12 +6,14 @@ import { Footer } from "./footer";
 import { Route } from "react-router-dom";
 import { About } from "./about";
 import { Resume } from "./resume";
+import { Contact } from "./contact";
 
 const Main = () => (
   <>
     <Splash /> 
     <ProjectIndex />
     <About />
+    < Contact />
   </>
 )
 

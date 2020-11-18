@@ -1,11 +1,11 @@
 import React from 'react';
-import { SocialLinks } from './socials';
+import { FooterLinks } from './socials';
 
 export const Footer = () => {
   
   let socials = []
-  for (let key in SocialLinks){
-    const item = SocialLinks[key];
+  for (let key in FooterLinks){
+    const item = FooterLinks[key];
     const li = (
       <li key={item.id} className="social-item">
         <a href={item.link}>

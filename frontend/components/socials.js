@@ -1,4 +1,4 @@
-export const SocialLinks = {
+export const FooterLinks = {
   github: {
     id: 0,
     link: 'https://github.com/nateychau',
@@ -14,4 +14,12 @@ export const SocialLinks = {
     link: 'https://angel.co/u/nathan-chau-6',
     icon: 'fab fa-angellist'
   }
+}
+
+export const SocialLinks = {
+  instagram: {
+    id: 3,
+    link: 'https://www.instagram.com/aybyal/',
+    icon: 'fab fa-instagram'
+  },
 }

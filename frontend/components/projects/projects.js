@@ -64,8 +64,8 @@ export const ProjectList = {
       bullets: ["This was something that I had wanted from Mountain Project, and it wasn't until I had completed Climb Log that I discovered that MP actually has a similar feature. The app is still a work in progress, but I feel like its at a point where I'm comfortable presenting it (at least on desktop lol - mobile functionality is still in progress). For people interested in using it, you need to have an active MP account with ticks (currently only pulls boulder ticks). There are still issues with responsiveness and data fetching, so I'd appreciate any feedback or suggestions."],
 
     },
-    picture: ''
-  }
+    picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/climblog.PNG'
+  },
   dropzone: {
     id: 2,
     name: 'dropzone',
