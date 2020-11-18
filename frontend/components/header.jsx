@@ -35,7 +35,7 @@ export class Header extends React.Component{
         // this.setState({windowTop: 0})
       } else {
         let section = document.getElementById(hash);
-        const yOffset = -80;
+        const yOffset = -60;
         const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({top: y, behavior: 'smooth'});
         // this.setState({current: hash});

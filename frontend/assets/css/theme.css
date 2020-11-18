@@ -3,6 +3,10 @@ body{
   color: #ffffff;
   font-family: 'Cabin', sans-serif;  
 }
+/* 
+#projects, #about, #contact{
+  background-color: #000000;
+} */
 
 iframe{
  border: none;

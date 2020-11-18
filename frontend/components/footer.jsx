@@ -24,7 +24,8 @@ export const Footer = () => {
         </address>
       </div>
       <div className="footer-third">
-        © Nathan Chau 2020
+        <div id='copyright'>© Nathan Chau 2020</div>
+        <div>Made with &#10084;</div>
       </div>
       <div className="footer-third right">
         <ul className="socials-list">

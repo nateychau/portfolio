@@ -253,7 +253,9 @@ var Footer = function Footer() {
     href: "mailto:nateychau@gmail.com"
   }, "nateychau@gmail.com"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-third"
-  }, "\xA9 Nathan Chau 2020"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "copyright"
+  }, "\xA9 Nathan Chau 2020"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Made with \u2764")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-third right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "socials-list"
@@ -353,7 +355,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
           }); // this.setState({windowTop: 0})
         } else {
           var section = document.getElementById(hash);
-          var yOffset = -80;
+          var yOffset = -60;
           var y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({
             top: y,
@@ -506,11 +508,11 @@ var ProjectIndex = /*#__PURE__*/function (_React$Component) {
           }, project.info[key]);
         });
         var projItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "proj-item",
+          className: _this3.state[project.id] ? "proj-item open" : "proj-item",
           id: project.name,
           key: project.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: _this3.state[project.id] ? "proj-item-top active" : "proj-item-top",
+          className: "proj-item-top",
           onClick: _this3.toggleOpen(project.id)
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "proj-item-third left"
@@ -536,11 +538,8 @@ var ProjectIndex = /*#__PURE__*/function (_React$Component) {
           className: "proj-btn",
           href: project.live,
           target: "_blank"
-        }, "Live") : null))), _this3.state[project.id] ?
-        /*#__PURE__*/
-        //openId === project.id ?
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "proj-item-bottom"
+        }, "Live") : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: _this3.state[project.id] ? "proj-item-bottom" : "proj-item-bottom hidden"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "proj-item-left"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -552,7 +551,7 @@ var ProjectIndex = /*#__PURE__*/function (_React$Component) {
           className: "proj-item-right"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "proj-info"
-        }, projLi))) : null);
+        }, projLi))));
         projList.push(projItem);
       };
 

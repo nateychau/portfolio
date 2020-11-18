@@ -59,11 +59,14 @@ export class ProjectIndex extends React.Component {
       });
 
       const projItem = (
-        <li className="proj-item" id={project.name} key={project.id}>
+        <li 
+          className={
+            this.state[project.id] ? "proj-item open" : "proj-item"
+          }
+          id={project.name} 
+          key={project.id}>
           <div
-            className={
-              this.state[project.id] ? "proj-item-top active" : "proj-item-top"
-            }
+            className="proj-item-top"
             onClick={this.toggleOpen(project.id)}
           >
             <div className="proj-item-third left">
@@ -97,8 +100,8 @@ export class ProjectIndex extends React.Component {
               </div>
             </div>
           </div>
-          {this.state[project.id] ? ( //openId === project.id ?
-          <div className="proj-item-bottom">
+          {/* //{this.state[project.id] ? ( //openId === project.id ? */}
+          <div className={this.state[project.id] ? "proj-item-bottom" : "proj-item-bottom hidden"}>
             <div className="proj-item-left">
               <div className="img-container">
                 <img className="proj-splash" src={project.picture}></img>
@@ -108,7 +111,7 @@ export class ProjectIndex extends React.Component {
               <ul className="proj-info">{projLi}</ul>
             </div>
           </div>
-            ) : null}
+          {/* ) : null} */}
         </li>
       );
       projList.push(projItem);

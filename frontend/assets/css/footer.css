@@ -9,6 +9,8 @@
   width: 33%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-third address{
@@ -19,6 +21,10 @@
 .footer-third address a{
   /* color: #fecf3b; */
   color: #69e0a5;
+}
+
+#copyright{
+  padding-bottom: 10px;
 }
 
 .socials-list{
