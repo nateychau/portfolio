@@ -4,7 +4,7 @@ export const Splash = (props) => {
   return (
     <div className="splash">
       <div className="splash-left">
-        <h2>Hi, I'm Nathan</h2>
+        <h2>Hi, I'm Nathan.</h2>
         <div>
           I'm a Software Engineer, with experience in UI/UX design. 
           Based in the Bay Area.  

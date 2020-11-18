@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const About = () => {
   return (
-    <div className="about">
+    <div id="about" className="about">
       <h2>About</h2>
       <div>
         <div className="about-left">
@@ -13,7 +13,7 @@ export const About = () => {
             is built with Redux, Canvas API, and AWS S3. 
             <br />
             <br />
-            Besides software, I'm passionate about rock climbing, traveling, and interior design. Check out some of the projects I've listed below to see how these interests intersect with software!
+            Besides software, I'm passionate about rock climbing, traveling, and interior design. Check out some of the projects I've listed above to see how these interests intersect with software!
           </div>
           <div>
             <Link to="/resume">

@@ -36,6 +36,18 @@ export const ProjectList = {
     picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/schopsplash_edit.PNG'
   }, 
   dropzone: {
-    
+    id: 2,
+    name: 'dropzone',
+    about: 'Dropzone is a game where players direct a falling ball into a goal by drawing lines to control the direction that the ball falls in. Players can collect trophies along the path for extra points.',
+    live: 'https://nateychau.github.io/dropzone_game/',
+    repo: 'https://github.com/nateychau/dropzone_game',
+    info: {
+      team: 'Solo Project',
+      location: 'San Francisco, CA',
+      time: 'November 2020',
+      technology: 'JavaScript, Canvas API, HTML5, CSS3',
+      bullets: ["The line drawing on mouse-click, with real-time preview of the line to be drawn, was achieved by stacking 2 different canvases on top of each other, and by attaching event listeners to the mouse-down, mouse-move, and mouse-up events. When a user is in draw mode, the script listens for a mouse-down event, which sets the draw flag to true. When the draw flag is true, the mouse-move event draws a line on a top level canvas from the starting (mouse-down) position to the current mouse position. On each mouse-move event, the canvas is cleared and a new line is drawn, to prevent the line from the previous frame from persisting. When the mouse-up event occurs, the line on the top level canvas is cleared, and a line (with the exact same start and end points) is drawn on a middle-level canvas, where all previous lines are drawn. The watermelon's animation frames are drawn on the third-level canvas. Layering the canvases this way makes clearing and redrawing the picture from the previous frame much easier."]
+    },
+    picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/drop_splash.PNG'
   }
 }

@@ -119,3 +119,26 @@
 .proj-splash{
   border-radius: 4px;
 }
+
+/* react transitions */
+
+.example-enter {
+  height: 0;
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  height: auto;
+  transition: all .1s ease-in;
+}
+
+
+.example-leave {
+  opacity: 1;
+  height: auto;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: all .1s ease-in;
+}

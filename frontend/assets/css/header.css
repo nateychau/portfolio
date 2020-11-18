@@ -20,6 +20,11 @@
   margin-right: 20px;
 }
 
+.nav-links li:hover{
+  cursor: pointer;
+  color: #fecf3b;
+}
+
 .nav-links li a{
   padding-bottom: 18px;
 }
