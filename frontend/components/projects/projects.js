@@ -49,5 +49,20 @@ export const ProjectList = {
       bullets: ["The line drawing on mouse-click, with real-time preview of the line to be drawn, was achieved by stacking 2 different canvases on top of each other, and by attaching event listeners to the mouse-down, mouse-move, and mouse-up events. When a user is in draw mode, the script listens for a mouse-down event, which sets the draw flag to true. When the draw flag is true, the mouse-move event draws a line on a top level canvas from the starting (mouse-down) position to the current mouse position. On each mouse-move event, the canvas is cleared and a new line is drawn, to prevent the line from the previous frame from persisting. When the mouse-up event occurs, the line on the top level canvas is cleared, and a line (with the exact same start and end points) is drawn on a middle-level canvas, where all previous lines are drawn. The watermelon's animation frames are drawn on the third-level canvas. Layering the canvases this way makes clearing and redrawing the picture from the previous frame much easier."]
     },
     picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/drop_splash.PNG'
-  }
+  },
+  learningCompass:{
+    id: 3,
+    name: 'bd learning compass tutorial',
+    about: 'From the beginning of July 2019 to the end of September, I interned at BD (Becton Dickinson) as a Learning Applications Developer. I was a member of their Education Services Team in San Diego, and my work mainly involved improving the user experience of BD Learning Compass, the company’s customer-facing learning management system (LMS).',
+    live: '',
+    repo: '',
+    info: {
+      team: 'In collaboration with: Sangeetha Ganessan, BD Education Services Team',
+      location: 'San Diego, CA',
+      time: 'July - September 2019',
+      technology: 'JavaScript, HTML5, CSS3, Google Tag Manager',
+      bullets: ["Many of our LMS’s first-time users were struggling to navigate around the site, and to find the courses that they needed to take. With team members, I conducted usability tests to understand user needs, and to find the issues that users were struggling with. To address the pain-points that we found, I designed and developed a tutorial overlay application that would appear on the site when a user logged in for the first time. The overlay was created in HTML/Javascript/CSS. The LMS was hosted on a closed source platform, which made it difficult for us to add custom code. I found a way around this by loading my JS through a Google Tag Manager feature that was built into the LMS platform. Groundbreaking stuff."],
+    },
+    picture: ''
+  },
 }

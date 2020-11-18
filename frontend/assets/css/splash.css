@@ -17,6 +17,10 @@
   line-height: 30px;
 }
 
+.splash-left > div{
+  display: flex;
+}
+
 .splash-right{
   align-items: flex-end;
 }
@@ -27,4 +31,13 @@
 
 #splash-img img{
   border-radius: 3px;
+}
+
+.splash-left h2{
+  display: flex;
+}
+
+.colored-text{
+  color: #69e0a5;
+  height: inherit;
 }

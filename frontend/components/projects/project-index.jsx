@@ -62,44 +62,41 @@ export class ProjectIndex extends React.Component {
                 <div>{project.about}</div>
               </div>
               <div className="right">
-                <a
-                  onClick={(e) => e.stopPropagation()}
-                  className="proj-btn"
-                  href={project.repo}
-                  target="_blank"
-                >
-                  Github
-                </a>
-                <a
-                  onClick={(e) => e.stopPropagation()}
-                  className="proj-btn"
-                  href={project.live}
-                  target="_blank"
-                >
-                  Live
-                </a>
+                {project.repo.length ? 
+                  <a
+                    onClick={(e) => e.stopPropagation()}
+                    className="proj-btn"
+                    href={project.repo}
+                    target="_blank"
+                  >
+                    Github
+                  </a>
+                : null} 
+                {project.live.length ? 
+                  <a
+                    onClick={(e) => e.stopPropagation()}
+                    className="proj-btn"
+                    href={project.live}
+                    target="_blank"
+                  >
+                    Live
+                  </a>
+                : null}
               </div>
             </div>
           </div>
-          
-            <CSSTransitionGroup
-              transitionName="example"
-              transitionEnterTimeout={100}
-              transitionLeaveTimeout={100}
-            >
-              {this.state[project.id] ? ( //openId === project.id ?
-              <div className="proj-item-bottom">
-                <div className="proj-item-left">
-                  <div className="img-container">
-                    <img className="proj-splash" src={project.picture}></img>
-                  </div>
-                </div>
-                <div className="proj-item-right">
-                  <ul className="proj-info">{projLi}</ul>
-                </div>
+          {this.state[project.id] ? ( //openId === project.id ?
+          <div className="proj-item-bottom">
+            <div className="proj-item-left">
+              <div className="img-container">
+                <img className="proj-splash" src={project.picture}></img>
               </div>
-               ) : null}
-            </CSSTransitionGroup>
+            </div>
+            <div className="proj-item-right">
+              <ul className="proj-info">{projLi}</ul>
+            </div>
+          </div>
+            ) : null}
         </li>
       );
       projList.push(projItem);

@@ -1,4 +1,5 @@
 .proj-index{
+  min-height: 100vh;
 }
 
 .proj-header{
@@ -31,7 +32,7 @@
 
 .center{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: 14px;
   width: 66.66%;
   padding-left: 30px;
@@ -55,7 +56,8 @@
 }
 
 .proj-item-top:hover{
-  color: #fecf3b;
+  /* color: #fecf3b; */
+  color: #69e0a5;
   transition: all 1s ease;
 }
 
