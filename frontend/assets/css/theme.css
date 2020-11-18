@@ -2,3 +2,13 @@ body{
   background-color: #000000;
   color: #ffffff;
 }
+
+iframe{
+ border: none;
+ width: 50%;
+ height: 50%;
+}
+
+a.active-link{
+  color: #fecf3b;
+}

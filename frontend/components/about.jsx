@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const About = () => {
   return (
@@ -9,6 +10,9 @@ export const About = () => {
           I'm currently working on Schopenahauer, a full stack MERN application, with a team of 3 other developers. Schopenhauer allows users to create and share music visualizers to pair with their favorite songs, and features a growing library of templates for creators to start with. Besides the MERN stack, Schopenahauer
           is built with Redux, Canvas API, and AWS S3. Besides software, I'm passionate about rock climbing, traveling, and interior design. Check out some of the projects I've listed below to see how these interests intersect with software!
         </div>
+        <Link to="/resume">
+          Resume
+        </Link>
       </div>
       <div className="about-right">
         <img className="about-pic" src="https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/IMG_9876.JPG"></img>
