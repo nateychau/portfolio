@@ -39,6 +39,12 @@
 
 .proj-item-top{
   padding: 30px 0;
+  cursor: pointer;
+}
+
+.proj-item-top:hover{
+  color: #fecf3b;
+  transition: all 1s ease;
 }
 
 .proj-item-bottom{
@@ -46,6 +52,8 @@
 }
 
 .proj-item-left, .proj-item-right{
+  display: flex;
+  align-items: center;
   width: 50%;
 }
 
@@ -88,4 +96,8 @@
 .bullet li{
   list-style-type: circle;
   /* list-style-position: inside; */
+}
+
+.proj-splash{
+  border-radius: 4px;
 }

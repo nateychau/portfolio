@@ -43,9 +43,12 @@ export class ProjectIndex extends React.Component{
           className="proj-item" 
           id={project.name} 
           key={project.id}
-          onClick={this.toggleOpen(project.id)}
         >
-          <div className="proj-item-top">
+          <div 
+            className={this.state.open ? "proj-item-top" : 
+            "proj-item-top closed"}
+            onClick={this.toggleOpen(project.id)}
+          >
             <div className="proj-item-third left">
               <div className="proj-title">{project.name}</div>
             </div>
@@ -53,8 +56,8 @@ export class ProjectIndex extends React.Component{
               <div>{project.about}</div>
             </div>
             <div className="proj-item-third right">
-              <a className="proj-btn" href={project.live} target="_blank">Live</a>
-              <a className="proj-btn" href={project.repo} target="_blank">Github</a>
+              <a onClick={(e) => e.stopPropagation()} className="proj-btn" href={project.repo} target="_blank">Github</a>
+              <a onClick={(e) => e.stopPropagation()} className="proj-btn" href={project.live} target="_blank">Live</a>
             </div>
           </div>
           {this.state.openId === project.id ? 
