@@ -16,5 +16,23 @@ export const ProjectList = {
     },
     role: '',
     picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/fb_splash.PNG',
+  }, 
+  schopenhauer: {
+    id: 1,
+    name: 'schopenhauer',
+    about: "Schopenhauer is a full-stack web app for users to create and share music visualizers for their favorite songs",
+    live: 'http://schopenhauer.herokuapp.com/#/',
+    repo: 'https://github.com/eric2523/Schopenhauer',
+    info: {
+      team: 'In Collaboration with Eric Xian, Harold Parker, Yuehan Huang',
+      location: 'San Francisco, CA',
+      time: 'October 2020 - Current',
+      technology: 'Javascript, React, CSS3 , HTML5, Canvas API, MongoDB, Express.js, AWS, Heroku',
+      bullets:['Constructed music visualizers by connecting handles from our self-made particle system to frequency/beat/amplitude data extracted from music',
+        'Designed a visualizer template component that could take desired settings as input from a plain Javascript object. This template was reused throughout the app and kept code DRY. ',
+        'Designed user profile page, featuring visualizer thumbnails, with React and Javascript. Passed additional props to template mentioned above, which caused visualizers to play on-hover.'],
+    },
+    role: '',
+    picture: ''
   }
 }

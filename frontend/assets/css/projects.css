@@ -47,6 +47,10 @@
   transition: all 1s ease;
 }
 
+.proj-item-top:hover a{
+  color: #ffffff;
+}
+
 .proj-item-bottom{
   padding: 20px 0;
 }
@@ -73,6 +77,7 @@
 
 .proj-list-item{
   padding-bottom: 2px;
+  font-size: 14px;
 }
 
 #team{
@@ -87,7 +92,7 @@
   color: #c9c9c9;
 }
 
-.bullet{
+.proj-list-item.bullet{
   font-size: 18px;
   padding-bottom: 12px;
   padding-left: 20px;
