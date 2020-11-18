@@ -35,6 +35,37 @@ export const ProjectList = {
     role: '',
     picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/schopsplash_edit.PNG'
   }, 
+  learningCompass:{
+    id: 3,
+    name: 'BD learning compass tutorial',
+    about: 'From the beginning of July 2019 to the end of September, I interned at BD (Becton Dickinson) as a Learning Applications Developer. I was a member of their Education Services Team in San Diego, and my work mainly involved improving the user experience of BD Learning Compass, the company’s customer-facing learning management system (LMS).',
+    live: '',
+    repo: '',
+    info: {
+      team: 'In collaboration with: Sangeetha Ganessan, BD Education Services Team',
+      location: 'San Diego, CA',
+      time: 'July - September 2019',
+      technology: 'JavaScript, HTML5, CSS3, Google Tag Manager',
+      bullets: ["Many of our LMS’s first-time users were struggling to navigate around the site, and to find the courses that they needed to take. With team members, I conducted usability tests to understand user needs, and to find the issues that users were struggling with. To address the pain-points that we found, I designed and developed a tutorial overlay application that would appear on the site when a user logged in for the first time. The overlay was created in HTML/Javascript/CSS. The LMS was hosted on a closed source platform, which made it difficult for us to add custom code. I found a way around this by loading my JS through a Google Tag Manager feature that was built into the LMS platform. Groundbreaking stuff."],
+    },
+    picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/bdlc.PNG',
+  },
+  climbLog: {
+    id: 4,
+    name: 'climb log',
+    about: "Climb Log is a web app I made for fun, and as a learning experience. For people familiar with the rock climbing database Mountain Project, Climb Log pulls a users' ticks from MP's database, and creates visualizations for it in the form of 2 graphs and a table.",
+    live: 'https://nateychau.github.io/MP-Ticks-App/',
+    repo: 'https://github.com/nateychau/MP-Ticks-App',
+    info: {
+      team: 'Solo Project',
+      location: 'San Diego, CA',
+      time: 'June 2020',
+      technology: 'JavaScript, CSS3 (Bootstrap), Mountain Project API',
+      bullets: ["This was something that I had wanted from Mountain Project, and it wasn't until I had completed Climb Log that I discovered that MP actually has a similar feature. The app is still a work in progress, but I feel like its at a point where I'm comfortable presenting it (at least on desktop lol - mobile functionality is still in progress). For people interested in using it, you need to have an active MP account with ticks (currently only pulls boulder ticks). There are still issues with responsiveness and data fetching, so I'd appreciate any feedback or suggestions."],
+
+    },
+    picture: ''
+  }
   dropzone: {
     id: 2,
     name: 'dropzone',
@@ -50,19 +81,5 @@ export const ProjectList = {
     },
     picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/drop_splash.PNG'
   },
-  learningCompass:{
-    id: 3,
-    name: 'bd learning compass tutorial',
-    about: 'From the beginning of July 2019 to the end of September, I interned at BD (Becton Dickinson) as a Learning Applications Developer. I was a member of their Education Services Team in San Diego, and my work mainly involved improving the user experience of BD Learning Compass, the company’s customer-facing learning management system (LMS).',
-    live: '',
-    repo: '',
-    info: {
-      team: 'In collaboration with: Sangeetha Ganessan, BD Education Services Team',
-      location: 'San Diego, CA',
-      time: 'July - September 2019',
-      technology: 'JavaScript, HTML5, CSS3, Google Tag Manager',
-      bullets: ["Many of our LMS’s first-time users were struggling to navigate around the site, and to find the courses that they needed to take. With team members, I conducted usability tests to understand user needs, and to find the issues that users were struggling with. To address the pain-points that we found, I designed and developed a tutorial overlay application that would appear on the site when a user logged in for the first time. The overlay was created in HTML/Javascript/CSS. The LMS was hosted on a closed source platform, which made it difficult for us to add custom code. I found a way around this by loading my JS through a Google Tag Manager feature that was built into the LMS platform. Groundbreaking stuff."],
-    },
-    picture: ''
-  },
+  
 }

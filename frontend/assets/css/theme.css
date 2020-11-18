@@ -25,3 +25,7 @@ a.active-link{
 .main{
   padding: 0 8.33%;
 }
+
+.active{
+  color: #69e0a5;
+}

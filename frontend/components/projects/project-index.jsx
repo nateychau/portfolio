@@ -33,7 +33,12 @@ export class ProjectIndex extends React.Component {
           const bullets = project.info[key];
           return bullets.map((bullet, i) => {
             return (
-              <div key={i} className="proj-list-item bullet">
+              <div 
+                key={i} 
+                className={bullets.length > 1 ? 
+                  "proj-list-item bullet"
+                : "proj-list-item single-line"}
+              >
                 <li>{bullet}</li>
               </div>
             );
@@ -50,7 +55,7 @@ export class ProjectIndex extends React.Component {
         <li className="proj-item" id={project.name} key={project.id}>
           <div
             className={
-              this.state.open ? "proj-item-top" : "proj-item-top closed"
+              this.state[project.id] ? "proj-item-top active" : "proj-item-top"
             }
             onClick={this.toggleOpen(project.id)}
           >
