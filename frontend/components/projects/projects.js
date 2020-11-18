@@ -1,5 +1,3 @@
-import facebookPic from "../../assets/images/fb_splash.PNG";
-
 export const ProjectList = {
   facebewk: {
     id: 0,
@@ -17,6 +15,6 @@ export const ProjectList = {
       'Utilized Redux store in order to save data fetched from back end to the front end, and avoid excessive requests for data that had already recently been requested. '],
     },
     role: '',
-    picture: facebookPic,
+    picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/fb_splash.PNG',
   }
 }
