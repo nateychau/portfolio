@@ -17,11 +17,13 @@ const Main = () => (
 
 export const App = () => {
   return (
+    <>
+    <Header />
     <div className="main">
-      <Header />
       <Route exact path="/" component={Main} />
       <Route exact path="/about" component={About} />
       <Route exact path="/resume" component={Resume} />
     </div>
+    </>
   );
 }

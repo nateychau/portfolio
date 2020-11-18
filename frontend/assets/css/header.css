@@ -1,9 +1,31 @@
 .header{
-  width: 100%;
+  width: 76%;
+  position: fixed;
+  height: 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px 12%;
+  background-color: black;
+  /* border-bottom: 1px solid #fecf3b; */
 }
+
 
 .nav-links{
   display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links li{
+  margin-right: 20px;
+}
+
+.nav-links li:last-of-type{
+  margin-right: 0;
+}
+
+.header-left a{
+  letter-spacing: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
 }

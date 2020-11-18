@@ -11,7 +11,9 @@ export const Splash = (props) => {
         </div>
       </div>
       <div className="splash-right">
-        <img></img>
+        <div id="splash-img" className="img-container">
+          <img src="https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/IMG_4827_Original.jpg"></img>
+        </div>
       </div>
     </div>
   )

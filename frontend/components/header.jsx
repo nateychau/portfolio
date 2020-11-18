@@ -5,7 +5,7 @@ export const Header = (props) => {
   return (
     <div className="header">
       <div className="header-left">
-      <NavLink activeClassName="active-link" to="/">Nathan Chau</NavLink>
+        <NavLink activeClassName="active-link" to="/">Nathan Chau</NavLink>
       </div>
       <div className="header-right">
         <ul className="nav-links">

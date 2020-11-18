@@ -4,6 +4,21 @@ import { ProjectList } from "./projects";
 export class ProjectIndex extends React.Component{
   constructor(props){
     super(props);
+    this.state = {
+      open: false,
+      openId: null
+    }
+    this.toggleOpen = this.toggleOpen.bind(this);
+  }
+
+  toggleOpen(id){
+    return () => {
+      if (!this.state.open){
+        this.setState({open: true, openId: id});
+      } else {
+        this.setState({open: false, openId: null});
+      }
+    }
   }
 
   render(){
@@ -14,19 +29,48 @@ export class ProjectIndex extends React.Component{
       const projKeys = Object.keys(project.info);
 
       const projLi = projKeys.map((key, i) => {
-        return <li key={i} className={key}>{project.info[key]}</li>
+        if(key === 'bullets'){
+          const bullets = project.info[key];
+          return bullets.map((bullet, i) => {
+            return <li key={i} className="proj-list-item bullet"><li>{bullet}</li></li>
+          })
+        }
+        return <li key={i} id={key} className="proj-list-item">{project.info[key]}</li>
       })
 
       const projItem = (
-        <li className="proj-item" id={project.name} key={project.id}>
-          <div className="proj-item-left">
-            <img className="proj-splash" src={project.picture}></img>
+        <li 
+          className="proj-item" 
+          id={project.name} 
+          key={project.id}
+          onClick={this.toggleOpen(project.id)}
+        >
+          <div className="proj-item-top">
+            <div className="proj-item-third left">
+              <div className="proj-title">{project.name}</div>
+            </div>
+            <div className="proj-item-third center">
+              <div>{project.about}</div>
+            </div>
+            <div className="proj-item-third right">
+              <a className="proj-btn" href={project.live} target="_blank">Live</a>
+              <a className="proj-btn" href={project.repo} target="_blank">Github</a>
+            </div>
           </div>
-          <div className="proj-item-right">
-            <ul className="proj-info">
-              {projLi}
-            </ul>
+          {this.state.openId === project.id ? 
+          <div className="proj-item-bottom">
+            <div className="proj-item-left">
+              <div className="img-container">
+                <img className="proj-splash" src={project.picture}></img>
+              </div>
+            </div>
+            <div className="proj-item-right">
+              <ul className="proj-info">
+                {projLi}
+              </ul>
+            </div>
           </div>
+          : null}
         </li>
       );
       projList.push(projItem);
@@ -34,6 +78,7 @@ export class ProjectIndex extends React.Component{
 
     return (
       <div className="proj-index">
+        <div className="proj-header">Projects</div>
         <ul className="proj-list">
           {projList}
         </ul>

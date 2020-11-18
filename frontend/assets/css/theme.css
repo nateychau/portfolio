@@ -1,6 +1,7 @@
 body{
   background-color: #000000;
   color: #ffffff;
+  font-family: 'Cabin', sans-serif;  
 }
 
 iframe{
@@ -11,4 +12,14 @@ iframe{
 
 a.active-link{
   color: #fecf3b;
+}
+
+.img-container img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.main{
+  padding: 0 12%;
 }
