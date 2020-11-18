@@ -23,5 +23,8 @@
 
 #splash-img{
   width: 60%;
+}
+
+#splash-img img{
   border-radius: 3px;
 }

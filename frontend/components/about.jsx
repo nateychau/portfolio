@@ -16,9 +16,9 @@ export const About = () => {
             Besides software, I'm passionate about rock climbing, traveling, and interior design. Check out some of the projects I've listed above to see how these interests intersect with software!
           </div>
           <div>
-            <Link to="/resume">
+            <a target="_blank"href="https://docs.google.com/gview?url=https://github.com/nateychau/portfolio/raw/main/frontend/assets/images/resume.pdf">
               Resume
-            </Link>
+            </a>
           </div>
         </div>
         <div className="about-right">
