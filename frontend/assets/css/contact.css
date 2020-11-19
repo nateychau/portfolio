@@ -28,3 +28,11 @@
 #contact > div{
   padding-bottom: 20px;
 }
+
+#email{
+  color:#69e0a5;
+}
+
+#contact > div:last-child{
+  padding-top: 40px;
+}

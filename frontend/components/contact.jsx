@@ -21,12 +21,14 @@ export const Contact = () => {
     <div id="contact">
       <h2>Contact</h2>
       <div>
-        Got a question? Or just wanna chat? Feel free to shoot me an email,
+        Got a question? Or just wanna chat? Feel free to shoot me an 
+        &nbsp;<a id="email" href="mailto:nateychau@gmail.com">email</a>,
         or connect with me on any of the platforms below. 
       </div>
       <ul className="socials-list">
         {socials}
       </ul>
+      <div>email: <a id="email" href="mailto:nateychau@gmail.com">nateychau@gmail.com</a></div>
     </div>
   )
 }
