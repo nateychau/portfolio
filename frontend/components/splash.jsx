@@ -6,8 +6,7 @@ export const Splash = (props) => {
       <div className="splash-left">
         <h2>Hi, I'm &nbsp;<div className="colored-text">Nathan.</div></h2>
         <div>
-          I'm a &nbsp;<div className="colored-text">Software Engineer</div>
-          , with experience in &nbsp;<div className="colored-text">UI/UX design</div>. 
+          I'm a &nbsp;<div className="colored-text">Software Engineer</div>, with experience in &nbsp;<div className="colored-text">UI/UX design</div>. 
         </div>
         <div>Based in the Bay Area.</div> 
       </div>
