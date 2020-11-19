@@ -25,7 +25,7 @@
 
 .proj-item-bottom{
   min-width: 100%;
-  max-height: 500px;
+  max-height: 800px;
   transition: max-height 0.5s ease-in, padding 0.5s ease-in, opacity .8s ease-in;
   padding: 20px 0;
   overflow: hidden;
