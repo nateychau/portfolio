@@ -79,12 +79,12 @@ export const ProjectList = {
       technology: 'JavaScript, Canvas API, HTML5, CSS3',
       bullets: ["The line drawing on mouse-click, with real-time preview of the line to be drawn, was achieved by stacking 2 different canvases on top of each other, and by attaching event listeners to the mouse-down, mouse-move, and mouse-up events. When a user is in draw mode, the script listens for a mouse-down event, which sets the draw flag to true. When the draw flag is true, the mouse-move event draws a line on a top level canvas from the starting (mouse-down) position to the current mouse position. On each mouse-move event, the canvas is cleared and a new line is drawn, to prevent the line from the previous frame from persisting. When the mouse-up event occurs, the line on the top level canvas is cleared, and a line (with the exact same start and end points) is drawn on a middle-level canvas, where all previous lines are drawn. The watermelon's animation frames are drawn on the third-level canvas. Layering the canvases this way makes clearing and redrawing the picture from the previous frame much easier."]
     },
-    picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/drop_splash.PNG'
+    picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/drop_splash.PNG',
   },
   dababyvinci: {
     id: 5,
     name: 'DaBaby Vinci',
-    about: "DaBaby Vinci was a submission to Mintbean's 'Graffiti Wall' Hackathon.",
+    about: "DaBaby Vinci was a submission to Mintbean's 'Graffiti Wall' Hackathon, which ran from Nov 6 - 12, 2020.",
     live: 'https://nateychau.github.io/graffiti_wall/',
     repo: 'https://github.com/nateychau/graffiti_wall',
     info: {
@@ -95,8 +95,7 @@ export const ProjectList = {
       bullets: ["Features adjustable spray density and reticle size, color picker, and screen saving", 
         "My role for this hackathon was focused on creating the UI, implenting spray sound, and creating the mouse reticle preview",],
     },
-    picture: ''
-
+    picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/dbvinci.PNG',
   }
   
 }
