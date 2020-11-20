@@ -24,7 +24,7 @@ export const ProjectList = {
     live: 'http://schopenhauer.herokuapp.com/#/',
     repo: 'https://github.com/eric2523/Schopenhauer',
     info: {
-      team: 'In Collaboration with Eric Xian, Harold Parker, Yuehan Huang',
+      team: 'In collaboration with Eric Xian, Harold Parker, Yuehan Huang',
       location: 'San Francisco, CA',
       time: 'October 2020 - Current',
       technology: 'Javascript, React, CSS3 , HTML5, Canvas API, MongoDB, Express.js, AWS, Heroku',
@@ -81,5 +81,22 @@ export const ProjectList = {
     },
     picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/drop_splash.PNG'
   },
+  dababyvinci: {
+    id: 5,
+    name: 'DaBaby Vinci',
+    about: "DaBaby Vinci was a submission to Mintbean's 'Graffiti Wall' Hackathon.",
+    live: 'https://nateychau.github.io/graffiti_wall/',
+    repo: 'https://github.com/nateychau/graffiti_wall',
+    info: {
+      team: 'In collaboration with Eric Xian and Yuehan Huang',
+      location: 'San Francisco, CA',
+      time: 'November 2020 (1 week)',
+      technology: 'JavaScript, Canvas API, HTML5, CSS3, html2canvas API',
+      bullets: ["Features adjustable spray density and reticle size, color picker, and screen saving", 
+        "My role for this hackathon was focused on creating the UI, implenting spray sound, and creating the mouse reticle preview",],
+    },
+    picture: ''
+
+  }
   
 }
