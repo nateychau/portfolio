@@ -1,5 +1,6 @@
 .proj-index{
   min-height: 100vh;
+  /* margin-bottom: 50px; */
 }
 
 .proj-header{
@@ -13,8 +14,12 @@
   flex-direction: column;
   border-bottom: 1px solid white;
 }
+/* 
+.proj-item.category-open{
+  border-bottom: 3px solid  #69e0a5;
+} */
 
-.proj-item-bottom.hidden{
+.proj-item-bottom.hidden, .category-item-bottom.hidden{
   max-height: 0;
   padding: 0 0;
   transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity .8s ease-out;
@@ -32,11 +37,33 @@
   opacity: 1;
 }
 
+.category-item-bottom{
+  min-width: 100%;
+  max-height: 4000px;
+  transition: max-height 0.5s ease-in, padding 0.5s ease-in, opacity .8s ease-in;
+  /* padding: 20px 0; */
+  overflow: hidden;
+  opacity: 1;
+}
+
 
 .proj-item-third{
   width: 33.33%;
   align-items: center;
   display: flex;
+}
+
+.category-item-third{
+  align-items: center;
+  display: flex;
+}
+
+.arrow{
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 1.5rem;
 }
 
 .proj-item-two-third{
@@ -66,11 +93,11 @@
 }
 
 
-.proj-item-top, .proj-item-bottom{
+.proj-item-top, .proj-item-bottom, .category-item-top{
   display: flex;
 }
 
-.proj-item-top{
+.proj-item-top, .category-item-top{
   padding: 30px 0;
   cursor: pointer;
   min-height: 80px;
@@ -79,7 +106,7 @@
   background-color: black;
 }
 
-.proj-item-top:hover{
+.proj-item-top:hover, .category-item-top:hover{
   /* color: #fecf3b; */
   color: #69e0a5;
   transition: color 1s ease;
@@ -90,6 +117,10 @@
 } */
 
 .open .proj-item-top{
+  color: #69e0a5;
+}
+
+.category-open .category-item-top{
   color: #69e0a5;
 }
 
@@ -109,7 +140,12 @@
 
 .proj-title{
   text-transform: capitalize;
-  font-size: 48px;
+  font-size: 36px;
+}
+
+.category-title{
+  text-transform: capitalize;
+  font-size: 52px;
 }
 
 .proj-info{
@@ -154,6 +190,7 @@
 
 .proj-splash{
   border-radius: 4px;
+  background-color: white;
 }
 
 .active a{
@@ -174,4 +211,10 @@
   background-color: white;
   color: black;
   transition: all 0.5s ease;
+}
+
+.proj-header.category{
+  color: #69e0a5; 
+  font-size: 14px;
+  font-weight: 600;
 }

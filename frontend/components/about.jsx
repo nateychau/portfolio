@@ -8,10 +8,10 @@ export const About = () => {
       <div>
         <div className="about-left">
           <h2>Nathan Chau</h2>
-          <div>I'm a software engineer with a specialization in front-end development and design, and experience with JavaScript, React, Redux, Ruby on Rails, jQuery, HTML5, CSS3, MongoDB, postgreSQL, and Express. My passion for software lies in the design of intuitive, accessible, and aesthetically-pleasing user interfaces. 
+          <div>My path to becoming a software engineer can be traced back to Christmas 2003, when I received my first set of legos. I don't remember what I built, but the feeling of putting those scattered little pieces into one complete toy is one that I still feel today, whenever I'm coding. I have a passion for intuitive and accessible software, and a love for seeing projects come to life. 
             <br />
             <br />
-            I'm currently working on Schopenahauer, a full stack MERN application, with a team of 3 other developers. Schopenhauer allows users to create and share music visualizers to pair with their favorite songs, and features a growing library of templates for creators to start with. Besides the MERN stack, Schopenahauer
+            I'm currently working on Schopenahauer with a team of 3 other developers. Schopenhauer is a platform that allows users to create and share music visualizers to pair with their favorite songs, and features a growing library of templates for creators to start with. Besides the MERN stack, Schopenahauer
             is built with Redux, Canvas API, and AWS S3. 
             <br />
             <br />
