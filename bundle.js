@@ -107,7 +107,7 @@ var About = function About() {
     className: "about"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "about-left"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Nathan Chau"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "My path to becoming a software engineer can be traced back to Christmas 2003, when I received my first set of legos. I don't remember what I built, but the feeling of putting those scattered little pieces into one complete toy is one that I still feel today, whenever I'm coding. I have a passion for intuitive and accessible software, and a love for seeing projects come to life.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "I'm currently working on Schopenahauer with a team of 3 other developers. Schopenhauer is a platform that allows users to create and share music visualizers to pair with their favorite songs, and features a growing library of templates for creators to start with. Besides the MERN stack, Schopenahauer is built with Redux, Canvas API, and AWS S3.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Besides software, I'm passionate about rock climbing, traveling, and interior design. Check out some of the projects I've listed above to see how these interests intersect with software!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Nathan Chau"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "My path to becoming a software engineer can be traced back to Christmas 2003, when I received my first set of legos. I don't remember what I built, but the feeling of putting those scattered little pieces into one complete toy is one that I still feel today, whenever I'm coding. I have a passion for intuitive and accessible software, and a love for seeing projects come to life.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "I'm currently working on Schopenhauer with a team of 3 other developers. Schopenhauer is a platform that allows users to create and share music visualizers to pair with their favorite songs, and features a growing library of templates for creators to start with. Besides the MERN stack, Schopenahauer is built with Redux, Canvas API, and AWS S3.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Besides software, I'm passionate about rock climbing, traveling, and interior design. Check out some of the projects I've listed above to see how these interests intersect with software!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     target: "_blank",
     href: "https://drive.google.com/file/d/10IcJAFDZYPAOsJsrJNTFQx1nwx2s9P9W/view?usp=sharing"
   }, "Resume"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -418,8 +418,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -466,10 +464,14 @@ var CategoryIndex = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       return function () {
-        if (_this2.state[id]) {
-          _this2.setState(_defineProperty({}, id, false));
+        if (_this2.state.open === id) {
+          _this2.setState({
+            open: false
+          });
         } else {
-          _this2.setState(_defineProperty({}, id, true));
+          _this2.setState({
+            open: id
+          });
         }
       };
     }
@@ -477,9 +479,9 @@ var CategoryIndex = /*#__PURE__*/function (_React$Component) {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
       if (!prevProps.closeAll && this.props.closeAll) {
-        for (var key in this.state) {
-          this.setState(_defineProperty({}, key, false));
-        }
+        this.setState({
+          open: false
+        });
       }
     }
   }, {
@@ -518,7 +520,7 @@ var CategoryIndex = /*#__PURE__*/function (_React$Component) {
           }, project.info[key]);
         });
         var projItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: _this3.state[project.id] ? "proj-item open" : "proj-item",
+          className: _this3.state.open === project.id ? "proj-item open" : "proj-item",
           id: project.name,
           key: project.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -549,7 +551,7 @@ var CategoryIndex = /*#__PURE__*/function (_React$Component) {
           href: project.live || project.video,
           target: "_blank"
         }, project.live ? 'Live' : 'Video') : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: _this3.state[project.id] ? "proj-item-bottom" : "proj-item-bottom hidden"
+          className: _this3.state.open === project.id ? "proj-item-bottom" : "proj-item-bottom hidden"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "proj-item-left"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -851,7 +853,7 @@ var ProjectList = {
       location: 'San Francisco, CA',
       time: 'November 2020',
       technology: 'JavaScript, Canvas API, HTML5, CSS3',
-      bullets: ["The line drawing on mouse-click, with real-time preview of the line to be drawn, was achieved by stacking 2 different canvases on top of each other, and by attaching event listeners to the mouse-down, mouse-move, and mouse-up events. When a user is in draw mode, the script listens for a mouse-down event, which sets the draw flag to true. When the draw flag is true, the mouse-move event draws a line on a top level canvas from the starting (mouse-down) position to the current mouse position. On each mouse-move event, the canvas is cleared and a new line is drawn, to prevent the line from the previous frame from persisting. When the mouse-up event occurs, the line on the top level canvas is cleared, and a line (with the exact same start and end points) is drawn on a middle-level canvas, where all previous lines are drawn. The watermelon's animation frames are drawn on the third-level canvas. Layering the canvases this way makes clearing and redrawing the picture from the previous frame much easier."]
+      bullets: ["The line drawing on mouse-click, with real-time preview of the line to be drawn, was achieved by stacking 2 different canvases on top of each other, and by attaching event listeners to the mouse-down, mouse-move, and mouse-up events. When a user is in draw mode, the script listens for a mouse-down event, which sets the draw flag to true. When the draw flag is true, the mouse-move event draws a line on a top level canvas from the starting (mouse-down) position to the current mouse position. On each mouse-move event, the canvas is cleared and a new line is drawn, to prevent the line from the previous frame from persisting. When the mouse-up event occurs, the line on the top level canvas is cleared, and a line (with the exact same start and end points) is drawn on a middle-level canvas, where all previous lines are drawn. The ball's animation frames are drawn on the third-level canvas. Layering the canvases this way makes clearing and redrawing the picture from the previous frame much easier."]
     },
     picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/drop_splash.PNG'
   },

@@ -22,14 +22,14 @@ export class ProjectIndex extends React.Component {
       } else {
         this.setState({ [id]: true });
       }
-    };
+    }
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     this.setState({
       open: false,
       openId: null,
-    })
+    });
   }
 
   render() {
@@ -39,19 +39,22 @@ export class ProjectIndex extends React.Component {
       Work: WorkList,
       Design: DesignList,
       Data: DataList,
-    }
+    };
     let keys = Object.keys(categories);
-    for(let i = 0; i < keys.length; i++){
+    for (let i = 0; i < keys.length; i++) {
       let category = keys[i];
       const list = categories[category];
 
       const categoryItem = (
-        <li 
+        <li
           className={
-            this.state[i] ? "proj-item category-open" : "proj-item"
+            this.state[i]
+              ? "proj-item category-open"
+              : "proj-item"
           }
-          id={category} 
-          key={i}>
+          id={category}
+          key={i}
+        >
           <div
             className="category-item-top"
             onClick={this.toggleOpen(i)}
@@ -60,11 +63,27 @@ export class ProjectIndex extends React.Component {
               <div className="category-title">{category}</div>
             </div>
             <div className="arrow">
-              <i className={this.state[i] ? "fas fa-caret-up" : "fas fa-caret-down"}></i>
+              <i
+                className={
+                  this.state[i]
+                    ? "fas fa-caret-up"
+                    : "fas fa-caret-down"
+                }
+              ></i>
             </div>
           </div>
-          <div className={this.state[i] ? "category-item-bottom" : "category-item-bottom hidden"}>
-            <CategoryIndex category={category} list={list} closeAll={!this.state[i]}/>
+          <div
+            className={
+              this.state[i]
+                ? "category-item-bottom"
+                : "category-item-bottom hidden"
+            }
+          >
+            <CategoryIndex
+              category={category}
+              list={list}
+              closeAll={!this.state[i]}
+            />
           </div>
         </li>
       );

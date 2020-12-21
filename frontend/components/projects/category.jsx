@@ -8,23 +8,22 @@ export class CategoryIndex extends React.Component {
       openId: null,
     };
     this.toggleOpen = this.toggleOpen.bind(this);
+    
   }
 
   toggleOpen(id) {
     return () => {
-      if (this.state[id]) {
-        this.setState({ [id]: false });
+      if (this.state.open === id) {
+        this.setState({ open: false });
       } else {
-        this.setState({ [id]: true });
+        this.setState({ open: id });
       }
     };
   }
 
   componentDidUpdate(prevProps){
     if(!prevProps.closeAll && this.props.closeAll){
-      for(let key in this.state){
-        this.setState({ [key] : false});
-      }
+      this.setState({ open: false});
     }
   }
 
@@ -67,7 +66,7 @@ export class CategoryIndex extends React.Component {
       const projItem = (
         <li 
           className={
-            this.state[project.id] ? "proj-item open" : "proj-item"
+            this.state.open === project.id ? "proj-item open" : "proj-item"
           }
           id={project.name} 
           key={project.id}>
@@ -107,7 +106,7 @@ export class CategoryIndex extends React.Component {
             </div>
           </div>
           {/* //{this.state[project.id] ? ( //openId === project.id ? */}
-          <div className={this.state[project.id] ? "proj-item-bottom" : "proj-item-bottom hidden"}>
+          <div className={this.state.open === project.id ? "proj-item-bottom" : "proj-item-bottom hidden"}>
             <div className="proj-item-left">
               <div className="img-container">
                 <img className="proj-splash" src={project.picture}></img>
