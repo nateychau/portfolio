@@ -25,6 +25,5 @@ export const Skills = {
     Git:  "devicon-git-plain",
     Heroku: "devicon-heroku-original",
     Webpack: "devicon-webpack-plain",
-    VSCode: "devicon-visualstudio-plain",
-   }
+  }
 }
