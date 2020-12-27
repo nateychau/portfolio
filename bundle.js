@@ -1032,6 +1032,7 @@ var SkillCategory = function SkillCategory(_ref) {
   for (var name in list) {
     var icon = list[name];
     var block = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: name,
       className: "skill-item"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: icon
@@ -1052,6 +1053,7 @@ var SkillIndex = function SkillIndex() {
   for (var category in _skill_db__WEBPACK_IMPORTED_MODULE_1__["Skills"]) {
     var list = _skill_db__WEBPACK_IMPORTED_MODULE_1__["Skills"][category];
     items.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SkillCategory, {
+      key: category,
       category: category,
       list: list
     }));

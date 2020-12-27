@@ -7,7 +7,7 @@ const SkillCategory = ({ category, list }) => {
     let icon = list[name];
 
     let block = (
-      <li className="skill-item">
+      <li key={name} className="skill-item">
         <i className={icon}></i>
         <h4>{name}</h4>
       </li>
@@ -28,7 +28,7 @@ export const SkillIndex = () => {
   let items = [];
   for (let category in Skills) {
     let list = Skills[category];
-    items.push(<SkillCategory category={category} list={list} />);
+    items.push(<SkillCategory key={category} category={category} list={list} />);
   }
 
   return <div className="skill-index">{items}</div>;
