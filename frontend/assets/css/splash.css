@@ -6,7 +6,7 @@
 }
 
 .splash-left, .splash-right{
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,11 +14,14 @@
 
 .splash-left{
   align-items: flex-start;
-  line-height: 30px;
+  /* line-height: 30px; */
+  font-size: 2rem;
 }
 
 .splash-left > div{
   display: flex;
+  margin-top: 10px;
+  min-height: 40px;
 }
 
 .splash-right{
@@ -35,6 +38,11 @@
 
 .splash-left h2{
   display: flex;
+  font-size: 10rem;
+  /* font-family: 'Playball', cursive; */
+  color: #69e0a5;
+  font-style: italic;
+  /* font-weight: 800; */
 }
 
 .colored-text{

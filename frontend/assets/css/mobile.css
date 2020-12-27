@@ -28,10 +28,16 @@
   .splash-left > div {
     display: block;
     text-align: center;
+    font-size: 1rem;
   }
 
   .splash-left > div div{
     display: inline;
+  }
+
+  .splash-left h2{
+    font-size: 5rem;
+    margin-bottom: 10px;
   }
 
   /* Projects */
@@ -99,6 +105,10 @@
 
   .about-right .img-container{
     width: 100%;
+  }
+
+  .category-list{
+    flex-wrap: wrap;
   }
 
   /* Footer */
