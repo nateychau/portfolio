@@ -98,7 +98,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "About", function() { return About; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _skills__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./skills */ "./frontend/components/skills.jsx");
+ // import { Link } from "react-router-dom";
 
 
 var About = function About() {
@@ -110,7 +111,9 @@ var About = function About() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Nathan Chau"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "My path to becoming a software engineer can be traced back to Christmas 2003, when I received my first set of legos. I don't remember what I built, but the feeling of putting those scattered little pieces into one complete toy is one that I still feel today, whenever I'm coding. I have a passion for intuitive and accessible software, and a love for seeing projects come to life.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "I'm currently working on Schopenhauer with a team of 3 other developers. Schopenhauer is a platform that allows users to create and share music visualizers to pair with their favorite songs, and features a growing library of templates for creators to start with. Besides the MERN stack, Schopenahauer is built with Redux, Canvas API, and AWS S3.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Besides software, I'm passionate about rock climbing, traveling, and interior design. Check out some of the projects I've listed above to see how these interests intersect with software!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     target: "_blank",
     href: "https://drive.google.com/file/d/10IcJAFDZYPAOsJsrJNTFQx1nwx2s9P9W/view?usp=sharing"
-  }, "Resume"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Resume")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    id: "skill-header"
+  }, "Skills"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_skills__WEBPACK_IMPORTED_MODULE_1__["SkillIndex"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "about-right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "img-container"
@@ -378,9 +381,10 @@ var Header = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-left"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: this.state.windowTop === 0 ? "header-title top" : "header-title",
+        // className={this.state.windowTop === 0 ? "header-title top" : "header-title"} 
+        className: "header-title",
         onClick: this.scrollTo('')
-      }, "Nathan Chau")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Portfolio.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-right"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "nav-links"
@@ -827,21 +831,6 @@ var ProjectList = {
     role: '',
     picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/schopsplash_edit.PNG'
   },
-  climbLog: {
-    id: 4,
-    name: 'climb log',
-    about: "Climb Log is a web app I made for fun, and as a learning experience. For people familiar with the rock climbing database Mountain Project, Climb Log pulls a users' ticks from MP's database, and creates visualizations for it in the form of 2 graphs and a table.",
-    live: 'https://nateychau.github.io/MP-Ticks-App/',
-    repo: 'https://github.com/nateychau/MP-Ticks-App',
-    info: {
-      team: 'Solo Project',
-      location: 'San Diego, CA',
-      time: 'June 2020',
-      technology: 'JavaScript, CSS3 (Bootstrap), Mountain Project API',
-      bullets: ["This was something that I had wanted from Mountain Project, and it wasn't until I had completed Climb Log that I discovered that MP actually has a similar feature. The app is still a work in progress, but I feel like its at a point where I'm comfortable presenting it (at least on desktop lol - mobile functionality is still in progress). For people interested in using it, you need to have an active MP account with ticks (currently only pulls boulder ticks). There are still issues with responsiveness and data fetching, so I'd appreciate any feedback or suggestions."]
-    },
-    picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/climblog.PNG'
-  },
   dropzone: {
     id: 2,
     name: 'dropzone',
@@ -856,6 +845,21 @@ var ProjectList = {
       bullets: ["The line drawing on mouse-click, with real-time preview of the line to be drawn, was achieved by stacking 2 different canvases on top of each other, and by attaching event listeners to the mouse-down, mouse-move, and mouse-up events. When a user is in draw mode, the script listens for a mouse-down event, which sets the draw flag to true. When the draw flag is true, the mouse-move event draws a line on a top level canvas from the starting (mouse-down) position to the current mouse position. On each mouse-move event, the canvas is cleared and a new line is drawn, to prevent the line from the previous frame from persisting. When the mouse-up event occurs, the line on the top level canvas is cleared, and a line (with the exact same start and end points) is drawn on a middle-level canvas, where all previous lines are drawn. The ball's animation frames are drawn on the third-level canvas. Layering the canvases this way makes clearing and redrawing the picture from the previous frame much easier."]
     },
     picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/drop_splash.PNG'
+  },
+  climbLog: {
+    id: 4,
+    name: 'climb log',
+    about: "Climb Log is a web app I made for fun, and as a learning experience. For people familiar with the rock climbing database Mountain Project, Climb Log pulls a users' ticks from MP's database, and creates visualizations for it in the form of 2 graphs and a table.",
+    live: 'https://nateychau.github.io/MP-Ticks-App/',
+    repo: 'https://github.com/nateychau/MP-Ticks-App',
+    info: {
+      team: 'Solo Project',
+      location: 'San Diego, CA',
+      time: 'June 2020',
+      technology: 'JavaScript, CSS3 (Bootstrap), Mountain Project API',
+      bullets: ["This was something that I had wanted from Mountain Project, and it wasn't until I had completed Climb Log that I discovered that MP actually has a similar feature. The app is still a work in progress, but I feel like its at a point where I'm comfortable presenting it (at least on desktop lol - mobile functionality is still in progress). For people interested in using it, you need to have an active MP account with ticks (currently only pulls boulder ticks). There are still issues with responsiveness and data fetching, so I'd appreciate any feedback or suggestions."]
+    },
+    picture: 'https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/climblog.PNG'
   },
   dababyvinci: {
     id: 5,
@@ -961,6 +965,105 @@ var Root = function Root() {
 
 /***/ }),
 
+/***/ "./frontend/components/skill_db.js":
+/*!*****************************************!*\
+  !*** ./frontend/components/skill_db.js ***!
+  \*****************************************/
+/*! exports provided: Skills */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Skills", function() { return Skills; });
+// import React from 'react';
+var Skills = {
+  'languages': {
+    Javascript: "devicon-javascript-plain",
+    Typescript: "devicon-typescript-plain",
+    Python: "devicon-python-plain",
+    Ruby: "devicon-ruby-plain",
+    Java: "devicon-java-plain"
+  },
+  'front end': {
+    React: "devicon-react-original",
+    Redux: "devicon-redux-original",
+    jQuery: "devicon-jquery-plain",
+    HTML5: "devicon-html5-plain",
+    CSS3: "devicon-css3-plain"
+  },
+  'back end': {
+    Node: "devicon-nodejs-plain",
+    Express: "devicon-express-original",
+    PostgreSQL: "devicon-postgresql-plain",
+    mongoDB: "devicon-mongodb-plain",
+    Rails: "devicon-rails-plain"
+  },
+  'other': {
+    Git: "devicon-git-plain",
+    Heroku: "devicon-heroku-original",
+    Webpack: "devicon-webpack-plain",
+    VSCode: "devicon-visualstudio-plain"
+  }
+};
+
+/***/ }),
+
+/***/ "./frontend/components/skills.jsx":
+/*!****************************************!*\
+  !*** ./frontend/components/skills.jsx ***!
+  \****************************************/
+/*! exports provided: SkillIndex */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillIndex", function() { return SkillIndex; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _skill_db__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./skill_db */ "./frontend/components/skill_db.js");
+
+
+
+var SkillCategory = function SkillCategory(_ref) {
+  var category = _ref.category,
+      list = _ref.list;
+  var items = [];
+
+  for (var name in list) {
+    var icon = list[name];
+    var block = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      className: "skill-item"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: icon
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, name));
+    items.push(block);
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "skill-section"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, category), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "category-list"
+  }, items));
+};
+
+var SkillIndex = function SkillIndex() {
+  var items = [];
+
+  for (var category in _skill_db__WEBPACK_IMPORTED_MODULE_1__["Skills"]) {
+    var list = _skill_db__WEBPACK_IMPORTED_MODULE_1__["Skills"][category];
+    items.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SkillCategory, {
+      category: category,
+      list: list
+    }));
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "skill-index"
+  }, items);
+};
+
+/***/ }),
+
 /***/ "./frontend/components/socials.js":
 /*!****************************************!*\
   !*** ./frontend/components/socials.js ***!
@@ -1017,20 +1120,13 @@ var Splash = function Splash(props) {
     className: "splash"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-left"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hi, I'm \xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Nathan Chau"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "colored-text"
-  }, "Nathan.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "I'm a \xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Software Engineer"), ", with experience in\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "colored-text"
-  }, "Software Engineer"), ", with experience in \xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "UI/UX design"), "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Based in the\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "colored-text"
-  }, "UI/UX design"), "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Based in the Bay Area.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash-right"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "splash-img",
-    className: "img-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/IMG_9876.JPG"
-  }))));
+  }, "Bay Area"), ".")));
 };
 
 /***/ }),

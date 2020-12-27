@@ -23,7 +23,8 @@
 }
 
 .about-right{
-  justify-content: flex-end
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .about-right .img-container{
@@ -53,4 +54,39 @@
 .about-left a:hover{
   color: #4fbe87;
   transition: all 1s ease;
+}
+
+.category-list{
+  display: flex;
+}
+
+#skill-header{
+  margin-top: 20px;
+}
+
+.skill-section > h2 {
+  text-transform: capitalize;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.skill-section{
+  margin-bottom: 10px;
+}
+
+.skill-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50px;
+  padding: 10px 10px;
+  margin-right: 10px;
+}
+
+.skill-item > h4{
+  font-size: 12px;
+}
+
+.skill-item > i{
+  font-size: 36px;
 }

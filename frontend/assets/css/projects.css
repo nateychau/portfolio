@@ -63,7 +63,8 @@
   align-items: center;
   padding-left: 20px;
   padding-top: 10px;
-  font-size: 1.5rem;
+  padding-right: 10px;
+  font-size: 3rem;
 }
 
 .proj-item-two-third{
@@ -95,6 +96,10 @@
 
 .proj-item-top, .proj-item-bottom, .category-item-top{
   display: flex;
+}
+
+.category-item-top{
+  justify-content: space-between;
 }
 
 .proj-item-top, .category-item-top{

@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { SkillIndex } from "./skills"
 
 export const About = () => {
   return (
@@ -22,6 +23,8 @@ export const About = () => {
               Resume
             </a>
           </div>
+          <h2 id="skill-header">Skills</h2>
+          <SkillIndex />
         </div>
         <div className="about-right">
           <div className="img-container">

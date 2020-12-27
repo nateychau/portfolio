@@ -48,10 +48,11 @@ export class Header extends React.Component{
       <div className="header">
         <div className="header-left">
           <div
-            className={this.state.windowTop === 0 ? "header-title top" : "header-title"} 
+            // className={this.state.windowTop === 0 ? "header-title top" : "header-title"} 
+            className="header-title"
             onClick={this.scrollTo('')}
             >
-              Nathan Chau
+              Portfolio.
           </div>
         </div>
         <div className="header-right">
