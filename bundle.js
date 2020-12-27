@@ -965,14 +965,102 @@ var Root = function Root() {
 
 /***/ }),
 
+/***/ "./frontend/components/skill_db.js":
+/*!*****************************************!*\
+  !*** ./frontend/components/skill_db.js ***!
+  \*****************************************/
+/*! exports provided: Skills */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Skills", function() { return Skills; });
+// import React from 'react';
+var Skills = {
+  'languages': {
+    Javascript: "devicon-javascript-plain",
+    Typescript: "devicon-typescript-plain",
+    Python: "devicon-python-plain",
+    Ruby: "devicon-ruby-plain",
+    Java: "devicon-java-plain"
+  },
+  'front end': {
+    React: "devicon-react-original",
+    Redux: "devicon-redux-original",
+    jQuery: "devicon-jquery-plain",
+    HTML5: "devicon-html5-plain",
+    CSS3: "devicon-css3-plain"
+  },
+  'back end': {
+    Node: "devicon-nodejs-plain",
+    Express: "devicon-express-original",
+    PostgreSQL: "devicon-postgresql-plain",
+    mongoDB: "devicon-mongodb-plain",
+    Rails: "devicon-rails-plain"
+  },
+  'other': {
+    Git: "devicon-git-plain",
+    Heroku: "devicon-heroku-original",
+    Webpack: "devicon-webpack-plain",
+    VSCode: "devicon-visualstudio-plain"
+  }
+};
+
+/***/ }),
+
 /***/ "./frontend/components/skills.jsx":
 /*!****************************************!*\
   !*** ./frontend/components/skills.jsx ***!
   \****************************************/
 /*! exports provided: SkillIndex */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/mnt/c/Users/natey/desktop/app_academy_remote/portfolio/frontend/components/skills.jsx'");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillIndex", function() { return SkillIndex; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _skill_db__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./skill_db */ "./frontend/components/skill_db.js");
+
+
+
+var SkillCategory = function SkillCategory(_ref) {
+  var category = _ref.category,
+      list = _ref.list;
+  var items = [];
+
+  for (var name in list) {
+    var icon = list[name];
+    var block = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      className: "skill-item"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: icon
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, name));
+    items.push(block);
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "skill-section"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, category), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "category-list"
+  }, items));
+};
+
+var SkillIndex = function SkillIndex() {
+  var items = [];
+
+  for (var category in _skill_db__WEBPACK_IMPORTED_MODULE_1__["Skills"]) {
+    var list = _skill_db__WEBPACK_IMPORTED_MODULE_1__["Skills"][category];
+    items.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SkillCategory, {
+      category: category,
+      list: list
+    }));
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "skill-index"
+  }, items);
+};
 
 /***/ }),
 
