@@ -28,7 +28,8 @@ export const About = () => {
         </div>
         <div className="about-right">
           <div className="img-container">
-            <img className="about-pic" src="https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/IMG_4827_Original.jpg"></img>
+            {/* <img className="about-pic" src="https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/IMG_4827_Original.jpg"></img> */}
+            <img className="about-pic" src="https://lh3.googleusercontent.com/pw/ACtC-3dTlIesjo6O-t6gsC3G5lWejHeWzl0Y667IYsOmTsN3BMOXuJSrqnbnTnYTmcB_BHBhH7JvdvsOXfQl7NaogsSjEDWcrjofshHM-L_IfNMBIso6vTWWEdd_Myr17DMSdoaP5n-UBp6jOEA9avVu8PAYRw=w1157-h867-no"></img>
           </div>
         </div>
       </div>
