@@ -120,7 +120,10 @@ var About = function About() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "about-pic",
     src: "https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/IMG_4827_Original.jpg"
-  })))));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://joannwphotos.com/#/",
+    target: "_blank"
+  }, "Joann Wang \xA9")))));
 };
 
 /***/ }),

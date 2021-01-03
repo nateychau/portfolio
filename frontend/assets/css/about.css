@@ -27,6 +27,13 @@
   align-items: flex-start;
 }
 
+.about-right a{
+  font-size: 12px; 
+  color: #acacac;
+  text-decoration: underline;
+  /* padding-left: 100%; */
+}
+
 .about-right .img-container{
   width: 60%;
 }

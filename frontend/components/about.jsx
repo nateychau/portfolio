@@ -29,6 +29,7 @@ export const About = () => {
         <div className="about-right">
           <div className="img-container">
             <img className="about-pic" src="https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/IMG_4827_Original.jpg"></img>
+            <a href="https://joannwphotos.com/#/" target="_blank">Joann Wang ©</a>
           </div>
         </div>
       </div>
