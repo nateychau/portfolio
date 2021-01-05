@@ -111,6 +111,12 @@
     flex-wrap: wrap;
   }
 
+  /* Contact */
+
+  #contact > div {
+    line-height: 24px;
+  }
+
   /* Footer */
 
   #footer{
