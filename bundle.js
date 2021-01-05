@@ -816,10 +816,10 @@ var ProjectList = {
       location: "San Francisco, CA",
       time: "January 2021",
       technology: "Python, Flask, React, Notion, CSS3, Heroku",
-      bullets: ["Designed an application flow where clients can manage their photos with Notion, and have their changes reflected on a live site.", "Portfolio is powered by a Flask App, connected to Notion’s API, serving a single-page React app.", "Notion doesn't have a public API available yet, but notion-py, a python client for Notion's private API, enables connection. I hooked the client up to a Flask app, and created several REST API endpoints for the front end to consume, as well as an index route to serve a single page React application.", "Implemented a simple timed caching system to avoid unnecesarry requests to Notion. The cache is set to the table state when the server starts, and saves a TTL (Set to 1 week in this case). Most portfolio websites are not receiving updates more often than this, but in cases where synced state is important, this caching mechanism can be switched off easily."]
+      bullets: ["Designed an application flow where website owners can manage their photos with Notion, and have their changes reflected on a live site.", "Portfolio is powered by a Flask App, connected to Notion’s API, serving a single-page React app.", "Notion doesn't have a public API available yet, but notion-py, a python client for Notion's private API, enables connection. I hooked the client up to a Flask app, and created several REST API endpoints for the front end to consume, as well as an index route to serve a single page React application.", "Implemented a simple timed caching system to avoid unnecesarry requests to Notion. The cache is set to the table state when the server starts, and saves a TTL (Set to 1 week in this case). Most portfolio websites are not receiving updates more often than this, but in cases where synced state is important, this caching mechanism can be switched off easily."]
     },
     role: "",
-    picture: "https://raw.githubusercontent.com/nateychau/jw_photos/main/docs/jw_desktop.PNG"
+    picture: "https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/jwphoto.PNG"
   },
   facebewk: {
     id: 0,
