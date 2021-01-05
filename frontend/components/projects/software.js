@@ -20,7 +20,7 @@ export const ProjectList = {
     },
     role: "",
     picture:
-      "https://raw.githubusercontent.com/nateychau/portfolio/main/frontend/assets/images/fb_splash.PNG",
+      "https://raw.githubusercontent.com/nateychau/jw_photos/main/docs/jw_desktop.PNG",
   },
   facebewk: {
     id: 0,
