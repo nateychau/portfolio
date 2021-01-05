@@ -21,8 +21,8 @@ export const Contact = () => {
     <div id="contact">
       <h2>Contact</h2>
       <div>
-        Got a question? Or just wanna chat? Feel free to shoot me an &nbsp;<a id="email" href="mailto:nateychau@gmail.com">email</a>,
-        or connect with me on any of the platforms below. 
+        Got a question? Or just wanna chat? Feel free to shoot me an <a id="email" href="mailto:nateychau@gmail.com">email</a>,
+        check out my <a id="email" href="https://www.notion.so/Nathan-s-Blog-d77f8240009044c9b33e5804637d523e">blog</a>, or connect with me on any of the platforms below. 
       </div>
       <ul className="socials-list">
         {socials}
