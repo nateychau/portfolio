@@ -540,7 +540,11 @@ var CategoryIndex = /*#__PURE__*/function (_React$Component) {
           className: "proj-item-third left"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "proj-title"
-        }, project.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, project.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "arrow"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          className: _this3.state.open === project.id ? "fas fa-caret-up" : "fas fa-caret-down"
+        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "proj-item-two-third"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "center"
@@ -553,14 +557,14 @@ var CategoryIndex = /*#__PURE__*/function (_React$Component) {
           className: "proj-btn",
           href: project.repo || project.paper,
           target: "_blank"
-        }, project.repo ? 'Github' : 'Paper') : null, project.live && project.live.length || project.video && project.video.length ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        }, project.repo ? "Github" : "Paper") : null, project.live && project.live.length || project.video && project.video.length ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           onClick: function onClick(e) {
             return e.stopPropagation();
           },
           className: "proj-btn",
           href: project.live || project.video,
           target: "_blank"
-        }, project.live ? 'Live' : 'Video') : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, project.live ? "Live" : "Video") : null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: _this3.state.open === project.id ? "proj-item-bottom" : "proj-item-bottom hidden"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "proj-item-left"

@@ -53,6 +53,14 @@
   display: flex;
 }
 
+.proj-item-third.left{
+  justify-content: space-between;
+}
+
+.proj-item-third.left .arrow {
+  font-size: 2rem;
+}
+
 .category-item-third{
   align-items: center;
   display: flex;

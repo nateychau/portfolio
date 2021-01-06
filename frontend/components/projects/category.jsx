@@ -8,7 +8,6 @@ export class CategoryIndex extends React.Component {
       openId: null,
     };
     this.toggleOpen = this.toggleOpen.bind(this);
-    
   }
 
   toggleOpen(id) {
@@ -21,17 +20,17 @@ export class CategoryIndex extends React.Component {
     };
   }
 
-  componentDidUpdate(prevProps){
-    if(!prevProps.closeAll && this.props.closeAll){
-      this.setState({ open: false});
+  componentDidUpdate(prevProps) {
+    if (!prevProps.closeAll && this.props.closeAll) {
+      this.setState({ open: false });
     }
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     this.setState({
       open: false,
       openId: null,
-    })
+    });
   }
 
   render() {
@@ -45,11 +44,13 @@ export class CategoryIndex extends React.Component {
           const bullets = project.info[key];
           return bullets.map((bullet, i) => {
             return (
-              <div 
-                key={i} 
-                className={bullets.length > 1 ? 
-                  "proj-list-item bullet"
-                : "proj-list-item single-line"}
+              <div
+                key={i}
+                className={
+                  bullets.length > 1
+                    ? "proj-list-item bullet"
+                    : "proj-list-item single-line"
+                }
               >
                 <li>{bullet}</li>
               </div>
@@ -64,49 +65,62 @@ export class CategoryIndex extends React.Component {
       });
 
       const projItem = (
-        <li 
+        <li
           className={
             this.state.open === project.id ? "proj-item open" : "proj-item"
           }
-          id={project.name} 
-          key={project.id}>
-          <div
-            className="proj-item-top"
-            onClick={this.toggleOpen(project.id)}
-          >
+          id={project.name}
+          key={project.id}
+        >
+          <div className="proj-item-top" onClick={this.toggleOpen(project.id)}>
             <div className="proj-item-third left">
               <div className="proj-title">{project.name}</div>
+              <div className="arrow">
+                  <i
+                    className={
+                      this.state.open === project.id ? "fas fa-caret-up" : "fas fa-caret-down"
+                    }
+                  ></i>
+                </div>
             </div>
             <div className="proj-item-two-third">
               <div className="center">
                 <div>{project.about}</div>
               </div>
               <div className="right">
-                {(project.repo && project.repo.length) || (project.paper && project.paper.length) ? 
+                {(project.repo && project.repo.length) ||
+                (project.paper && project.paper.length) ? (
                   <a
                     onClick={(e) => e.stopPropagation()}
                     className="proj-btn"
                     href={project.repo || project.paper}
                     target="_blank"
                   >
-                    {project.repo ? 'Github' : 'Paper'}
+                    {project.repo ? "Github" : "Paper"}
                   </a>
-                : null} 
-                {(project.live && project.live.length) || (project.video && project.video.length) ? 
+                ) : null}
+                {(project.live && project.live.length) ||
+                (project.video && project.video.length) ? (
                   <a
                     onClick={(e) => e.stopPropagation()}
                     className="proj-btn"
                     href={project.live || project.video}
                     target="_blank"
                   >
-                    {project.live ? 'Live' : 'Video'}
+                    {project.live ? "Live" : "Video"}
                   </a>
-                : null}
+                ) : null}
               </div>
             </div>
           </div>
           {/* //{this.state[project.id] ? ( //openId === project.id ? */}
-          <div className={this.state.open === project.id ? "proj-item-bottom" : "proj-item-bottom hidden"}>
+          <div
+            className={
+              this.state.open === project.id
+                ? "proj-item-bottom"
+                : "proj-item-bottom hidden"
+            }
+          >
             <div className="proj-item-left">
               <div className="img-container">
                 <img className="proj-splash" src={project.picture}></img>
