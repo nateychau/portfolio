@@ -49,3 +49,8 @@
   color: #69e0a5;
   height: inherit;
 }
+
+.splash-left a.colored-text{
+  color: #69e0a5;
+  text-decoration: underline;
+}
