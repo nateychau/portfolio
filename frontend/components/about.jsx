@@ -10,7 +10,7 @@ export const About = () => {
         <div className="about-left">
           <h2>Nathan Chau</h2>
           <div>
-            Currently building @ <a href="https://www.gatsbylabs.io/" target="_blank" className="colored-text">Gatsby Labs</a>.
+            Currently building @ <a href="https://gatsby.events/" target="_blank" className="colored-text">Gatsby Labs</a>.
           {/* <div>My path to becoming a software engineer can be traced back to Christmas 2003, when I received my first set of legos. I don't remember what I built, but the feeling of putting those scattered little pieces into one complete toy is one that I still feel today, whenever I'm coding. I have a passion for intuitive and accessible software, and a love for seeing projects come to life. 
             <br />
             <br />
