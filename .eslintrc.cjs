@@ -4,15 +4,22 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
+    'plugin:react-hooks/recommended'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
+  plugins: [
+    'react-refresh',
+    'simple-import-sort',
+    'unused-imports',
+  ],
   rules: {
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
     ],
+    'simple-import-sort/imports': 'warn',
+    'unused-imports/no-unused-imports': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn'
   },
 }
