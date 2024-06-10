@@ -1,6 +1,10 @@
-import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState } from 'react';
 import styled from 'styled-components';
+
+import { Button } from '../Button';
+import { Link } from '../Link';
 
 const LINKS = {
   github: {
@@ -10,11 +14,7 @@ const LINKS = {
   linkedin: {
     link: 'https://www.linkedin.com/in/nathan-chau-363130180/',
     icon: faLinkedin
-  },
-  instagram: {
-    link: 'https://www.instagram.com/aybyal/',
-    icon: faInstagram
-  },
+  }
 };
 
 const Container = styled.ul`
@@ -26,9 +26,17 @@ const Container = styled.ul`
   > li:not(:first-child) {
     margin-left: 12px;
   }
+
+  > ${Button} {
+    font-size: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 `;
 
 const StyledIcon = styled(FontAwesomeIcon)`
+  width: 24px;
+  height: 24px;
   color: ${({ theme }) => theme.palette.link};
   &:hover {
     color: ${({ theme }) => theme.palette.hover};
@@ -36,6 +44,8 @@ const StyledIcon = styled(FontAwesomeIcon)`
 `;
 
 export function Footer({ className }: { className?: string }) {
+  const [showEmail, setShowEmail] = useState(false);
+
   return (
     <Container className={className}>
       {Object.keys(LINKS).map((key) => {
@@ -48,6 +58,8 @@ export function Footer({ className }: { className?: string }) {
           </li>
         )
       })}
+      <Button onClick={() => setShowEmail(true)}>Contact: </Button>
+      {showEmail && <Link href='mailto:nateychau@gmail.com'>nateychau@gmail.com</Link>}
     </Container>
   )
 }

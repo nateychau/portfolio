@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-import { Footer } from '../../components/Footer';
+import { Footer, Link } from '../../components';
 
 const Page = styled.div`
   width: 100vw;
   height: 100vh;
-  padding: 12px 24px;
-  background-color: #111111;
+  padding: 20px 24px;
+  background-color: ${({ theme }) => theme.palette.bg};
 
   > h1 {
     font-style: normal;
@@ -22,13 +22,6 @@ const Body = styled.div`
   max-width: 800px;
   color: ${({ theme }) => theme.palette.default};
 `;
-
-const Link = styled.a`
-  color: ${({ theme }) => theme.palette.link};
-  &:hover {
-    color: ${({ theme }) => theme.palette.hover};
-  }
-`
 
 export function HomePage() {
   return (

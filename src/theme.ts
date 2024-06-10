@@ -2,7 +2,8 @@ const theme = {
   palette: {
     default: '#37eb34',
     link: '#ffffff',
-    hover: '#dfebe0'
+    hover: '#dfebe0',
+    bg: '#111111'
   }
 };
 
